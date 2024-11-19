@@ -83,10 +83,59 @@ body {
 }
 
 /* Sobre, Funcionalidades e Galeria */
+/* Geral */
+/* Seções gerais */
 section {
-    padding: 4rem 0;
+    padding: 4rem 0; /* Espaçamento interno em cada seção */
     text-align: center;
 }
+
+/* Sobre o Projeto */
+.about {
+    background-color: #f8f9fa; /* Fundo cinza-claro para destacar */
+    border-bottom: 2px solid #e0e0e0; /* Linha sutil entre seções */
+}
+
+/* Funcionalidades */
+.features {
+    background-color: #ffffff; /* Fundo branco para contraste */
+    border-bottom: 2px solid #e0e0e0; /* Linha sutil entre seções */
+}
+
+/* Galeria */
+.demo {
+    background-color: #f8f9fa; /* Fundo cinza-claro para destaque */
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+
+/* Estilo dos títulos */
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    color: #333;
+}
+
+section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #4DA6FF; /* Azul claro */
+    margin: 1rem auto 0 auto;
+    border-radius: 2px;
+}
+
+/* Linhas divisórias entre as seções */
+.section-divider {
+    width: 80%;
+    margin: 2rem auto;
+    border: 0;
+    border-top: 2px solid #ddd;
+}
+
 
 .features .feature-list {
     display: flex;
@@ -151,4 +200,20 @@ section {
 .button:hover {
     background: #333;
     color: #fff;
+}
+
+.feature-item {
+    flex: 1;
+    margin: 0 1rem;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais perceptível */
+    border: 1px solid #ddd; /* Borda leve para delimitar ainda mais */
+    transition: transform 0.2s, box-shadow 0.2s; /* Animação para hover */
+}
+
+.feature-item:hover {
+    transform: scale(1.05); /* Aumenta levemente o cartão ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais forte no hover */
 }
