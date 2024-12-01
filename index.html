@@ -26,11 +26,9 @@
         <div class="container">
             <p>Transformando a educação odontológica com Realidade Aumentada.</p>
             <p>Explore estruturas internas anatômicas de dentes de forma interativa e imersiva.</p>
-            <!-- Botão com link para o PDF -->
             <a href="monografia.pdf" target="_blank" class="button">Monografia</a>
         </div>
     </section>
-
 
     <!-- Sobre o Projeto -->
     <section id="about" class="about">
@@ -39,8 +37,7 @@
             <p>
                 VidaXR é uma aplicação inovadora desenvolvida para professores e estudantes da área de odontologia.
                 Utilizando o Meta Quest 3, a aplicação permite visualizar estruturas internas dos dentes de forma
-                interativa,
-                oferecendo uma experiência educacional avançada e prática.
+                interativa, oferecendo uma experiência educacional avançada e prática.
             </p>
         </div>
     </section>
@@ -66,7 +63,6 @@
         </div>
     </section>
 
-    <!-- Galeria -->
     <section id="demo" class="demo">
         <div class="container">
             <h2>Galeria</h2>
@@ -90,14 +86,35 @@
         </div>
     </section>
 
-    <!-- Rodapé -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
     <footer class="footer">
         <div class="container">
             <p>&copy; 2024 VidaXR. Desenvolvido por Emilly Arcanjo, Izabela Marina e Lucas Ramos. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
+        const captionText = document.getElementById("caption");
+
+        document.querySelectorAll(".gallery img").forEach(img => {
+            img.onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        });
+
+        document.querySelector(".close").onclick = function () {
+            modal.style.display = "none";
+        };
+    </script>
 </body>
 
 </html>
