@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VidaXR - Educação em Realidade Aumentada</title>
+    <title>Vida XR - Educação em Realidade Aumentada</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,7 +12,7 @@
     <!-- Cabeçalho -->
     <header class="header">
         <div class="container">
-            <img src="logo.png" alt="VidaXR Logo" class="logo">
+            <img src="logo.png" alt="Vida XR Logo" class="logo">
             <nav class="nav">
                 <a href="#about">Sobre o Projeto</a>
                 <a href="#features">Funcionalidades</a>
@@ -35,7 +35,7 @@
         <div class="container">
             <h2>Sobre o Projeto</h2>
             <p>
-                VidaXR é uma aplicação inovadora desenvolvida para professores e estudantes da área de odontologia.
+                Vida XR é uma aplicação inovadora desenvolvida para professores e estudantes da área de odontologia.
                 Utilizando o Meta Quest 3, a aplicação permite visualizar estruturas internas dos dentes de forma
                 interativa, oferecendo uma experiência educacional avançada e prática.
             </p>
@@ -67,21 +67,21 @@
         <div class="container">
             <h2>Galeria</h2>
             <div class="gallery">
-                <img src="image0.png" alt="Imagem 0">
-                <img src="image1.png" alt="Imagem 1">
-                <img src="image2.png" alt="Imagem 2">
-                <img src="image3.png" alt="Imagem 3">
-                <img src="image4.png" alt="Imagem 4">
-                <img src="image5.png" alt="Imagem 5">
-                <img src="image6.png" alt="Imagem 6">
-                <img src="image7.png" alt="Imagem 7">
-                <img src="image8.png" alt="Imagem 8">
-                <img src="image9.png" alt="Imagem 9">
-                <img src="image10.png" alt="Imagem 10">
-                <img src="image11.png" alt="Imagem 11">
-                <img src="image12.png" alt="Imagem 12">
-                <img src="image13.png" alt="Imagem 13">
-                <img src="image14.png" alt="Imagem 14">
+                <img src="image0.png">
+                <img src="image1.png">
+                <img src="image2.png">
+                <img src="image3.png">
+                <img src="image4.png">
+                <img src="image5.png">
+                <img src="image6.png">
+                <img src="image7.png">
+                <img src="image8.png">
+                <img src="image9.png">
+                <img src="image10.png">
+                <img src="image11.png">
+                <img src="image12.png">
+                <img src="image13.png">
+                <img src="image14.png">
             </div>
         </div>
     </section>
@@ -94,27 +94,13 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 VidaXR. Desenvolvido por Emilly Arcanjo, Izabela Marina e Lucas Ramos. Todos os direitos reservados.</p>
+            <p>&copy; 2024 Vida XR. Desenvolvido por Emilly Arcanjo, Izabela Marina e Lucas Ramos. Todos os direitos
+                reservados.</p>
         </div>
     </footer>
 
-    <script>
-        const modal = document.getElementById("imageModal");
-        const modalImg = document.getElementById("modalImage");
-        const captionText = document.getElementById("caption");
+    <script src="script.js"></script>
 
-        document.querySelectorAll(".gallery img").forEach(img => {
-            img.onclick = function () {
-                modal.style.display = "block";
-                modalImg.src = this.src;
-                captionText.innerHTML = this.alt;
-            }
-        });
-
-        document.querySelector(".close").onclick = function () {
-            modal.style.display = "none";
-        };
-    </script>
 </body>
 
 </html>
